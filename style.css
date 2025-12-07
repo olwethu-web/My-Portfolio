@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* HERO */
+.hero {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #3a8ef6, #1e3c72);
+  color: white;
+}
+
+.highlight {
+  color: gold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin-top: 10px;
+  background: gold;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SKILLS */
+.skill-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-box div {
+  background: white;
+  padding: 20px;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+/* PROJECTS */
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+  text-align: left;
+}
+
+/* CONTACT FORM */
+form {
+  max-width: 400px;
+  margin: auto;
+  display: grid;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
