@@ -1,62 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Minimal Pro Calculator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="theme-default">
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Hey! I’m the person behind this page — <span class="highlight">Olwethu_Sibiya</span></h1>
-        <p>A web developer in the making, one line of code at a time </p>
-        <a class="btn" href="#projects">View More →</a>
+  <main class="phone">
+    <header class="topbar">
+      <div class="title">
+        <div class="name">Minimal<span class="accent">Pro</span></div>
+        <div class="subtitle">Calculator</div>
+      </div>
+
+      <div class="controls">
+        <select id="themeSelect" aria-label="Theme">
+          <option value="theme-default">Light</option>
+          <option value="theme-blue">Blue</option>
+          <option value="theme-dark">Dark</option>
+        </select>
+        <button id="soundToggle" title="Toggle sound">🔊</button>
+      </div>
+    </header>
+
+    <section class="display-area">
+      <div id="historyToggle" class="history-toggle">History ▾</div>
+      <input id="display" type="text" inputmode="decimal" aria-label="Calculator display" readonly>
+      <div id="subDisplay" class="sub-display"></div>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-        <h2>About →</h2>
-        <p>I’m an aspiring web developer with a growing skillset in HTML, CSS, and JavaScript. I focus on creating simple, clean, and functional websites and apps.</p>
+    <section id="keypad" class="keypad">
+      <!-- row 1 -->
+      <button class="btn small danger" data-action="clear">C</button>
+      <button class="btn small" data-action="del">DEL</button>
+      <button class="btn small" data-insert="(">(</button>
+      <button class="btn small" data-insert=")">)</button>
+
+      <!-- row 2 -->
+      <button class="btn" data-insert="7">7</button>
+      <button class="btn" data-insert="8">8</button>
+      <button class="btn" data-insert="9">9</button>
+      <button class="btn op" data-insert="÷">÷</button>
+
+      <!-- row 3 -->
+      <button class="btn" data-insert="4">4</button>
+      <button class="btn" data-insert="5">5</button>
+      <button class="btn" data-insert="6">6</button>
+      <button class="btn op" data-insert="×">×</button>
+
+      <!-- row 4 -->
+      <button class="btn" data-insert="1">1</button>
+      <button class="btn" data-insert="2">2</button>
+      <button class="btn" data-insert="3">3</button>
+      <button class="btn op" data-insert="-">−</button>
+
+      <!-- row 5 -->
+      <button class="btn zero" data-insert="0">0</button>
+      <button class="btn" data-insert=".">.</button>
+      <button class="btn equals" data-action="equals">=</button>
+      <button class="btn op" data-insert="+">+</button>
+
+      <!-- scientific row (below) -->
+      <div class="sci-row">
+        <button class="btn small" data-insert="sin(">sin</button>
+        <button class="btn small" data-insert="cos(">cos</button>
+        <button class="btn small" data-insert="tan(">tan</button>
+        <button class="btn small" data-insert="sqrt(">√</button>
+
+        <button class="btn small" data-insert="pow(">pow</button>
+        <button class="btn small" data-insert="pi">π</button>
+        <button class="btn small" data-insert="ln(">ln</button>
+        <button class="btn small" data-insert="log(">log</button>
+      </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skill-box">
-            <div>HTML</div>
-            <div>CSS</div>
-            <div>JavaScript</div>
-        </div>
+    <section id="historyPanel" class="history-panel hidden">
+      <div class="history-header">
+        <div>Calculation History</div>
+        <button id="clearHistory" class="small danger">Clear</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
     </section>
+  </main>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-list">
-            <div class="project-card">
-                <h3>Clicker Coin Game</h3>
-                <p>A lightweight tap-to-earn game with upgrade options and appealing animations.</p>
-            </div>
-
-            <div class="project-card">
-                <h3>Calculator App</h3>
-                <p>A basic calculator with modern UI.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button class="btn" type="submit">Send Message</button>
-        </form>
-    </section>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
